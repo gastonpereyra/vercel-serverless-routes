@@ -1,6 +1,6 @@
 {
   "name": "vercel-serverless-routes",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "A helper to build Vercel routes ",
   "main": "lib/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "directories": {
     "test": "tests"
   },
-  "bin": "lib/route-builder",
+  "bin": "lib/route-builder.js",
   "scripts": {
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "coverage": "nyc npm test",
