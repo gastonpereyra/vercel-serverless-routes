@@ -1,7 +1,7 @@
 ---
 name: Story
 about: Story to organize development
-title: "[vercel-serverless-router] - Package -"
+title: "[vercel-serverless-routes] - Package -"
 labels: enhancement
 assignees: gastonpereyra
 

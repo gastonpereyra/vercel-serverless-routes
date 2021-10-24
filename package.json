@@ -1,6 +1,6 @@
 {
-  "name": "vercel-serverless-router",
-  "version": "1.0.0",
+  "name": "vercel-serverless-routes",
+  "version": "1.0.0-beta.1",
   "description": "A helper to build Vercel routes ",
   "main": "lib/index.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gastonpereyra/vercel-serverless-router.git"
+    "url": "git+https://github.com/gastonpereyra/vercel-serverless-routes.git"
   },
   "keywords": [
     "vercel",
@@ -34,9 +34,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gastonpereyra/vercel-serverless-router/issues?labels=bug&template=bug.md&title=[BUG]"
+    "url": "https://github.com/gastonpereyra/vercel-serverless-routes/issues?labels=bug&template=bug.md&title=[BUG]"
   },
-  "homepage": "https://github.com/gastonpereyra/vercel-serverless-router#readme",
+  "homepage": "https://github.com/gastonpereyra/vercel-serverless-routes#readme",
   "devDependencies": {
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^13.2.0",
