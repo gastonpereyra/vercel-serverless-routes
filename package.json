@@ -9,6 +9,7 @@
   "directories": {
     "test": "tests"
   },
+  "bin": "lib/route-builder",
   "scripts": {
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "coverage": "nyc npm test",
