@@ -3,7 +3,9 @@
     "tests/",
     "coverage/",
     ".eslintrc.js",
-    "actions/"
+    "actions/",
+    "lib/builder",
+    "lib/route-builder.js"
   ],
   "extension": [
     ".js"
