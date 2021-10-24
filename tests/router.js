@@ -58,7 +58,7 @@ describe('Router', () => {
 				error: 'Cannot find function'
 			});
 
-			sinon.assert.calledOnceWithExactly(Router.getController, '../src/apis/test/get');
+			sinon.assert.calledOnceWithExactly(Router.getController, `${process.cwd()}/src/apis/test/get`);
 		});
 	});
 
@@ -89,7 +89,7 @@ describe('Router', () => {
 			sinon.assert.calledOnceWithExactly(response.status, 200);
 			sinon.assert.calledOnceWithExactly(response.json, {});
 
-			sinon.assert.calledOnceWithExactly(Router.getController, '../src/apis/test/get');
+			sinon.assert.calledOnceWithExactly(Router.getController, `${process.cwd()}/src/apis/test/get`);
 		});
 
 		it('Should set status code 200 with pathParams', async () => {
@@ -106,7 +106,7 @@ describe('Router', () => {
 				id: '1'
 			});
 
-			sinon.assert.calledOnceWithExactly(Router.getController, '../src/apis/test/get');
+			sinon.assert.calledOnceWithExactly(Router.getController, `${process.cwd()}/src/apis/test/get`);
 		});
 
 		it('Should set status code 200 with queries', async () => {
@@ -123,7 +123,7 @@ describe('Router', () => {
 				id: '10'
 			});
 
-			sinon.assert.calledOnceWithExactly(Router.getController, '../src/apis/test/get');
+			sinon.assert.calledOnceWithExactly(Router.getController, `${process.cwd()}/src/apis/test/get`);
 		});
 
 		it('Should set status code 200 with custom controller', async () => {
@@ -138,7 +138,7 @@ describe('Router', () => {
 			sinon.assert.calledOnceWithExactly(response.status, 200);
 			sinon.assert.calledOnceWithExactly(response.json, {});
 
-			sinon.assert.calledOnceWithExactly(Router.getController, '../public/test/base');
+			sinon.assert.calledOnceWithExactly(Router.getController, `${process.cwd()}/public/test/base`);
 		});
 	});
 });
