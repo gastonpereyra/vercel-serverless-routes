@@ -28,7 +28,7 @@
     "builder",
     "backend"
   ],
-  "author": "Gastón Pereyra"
+  "author": "Gastón Pereyra",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gastonpereyra/vercel-serverless-routes/issues?labels=bug&template=bug.md&title=[BUG]"
