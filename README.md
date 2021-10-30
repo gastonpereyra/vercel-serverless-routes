@@ -55,13 +55,13 @@ So, you can add to your `package.json`:
   }
 ```
 
-### Defining an endpoint
+### Defining an endpoint 🔗
 
 Every endpoint for every route will be added to the base URL of your vercel project:
 
 - `https://your-project-name.vercel.app/ENDPOINT`
 
-#### Vercel Native
+#### Vercel Native 🔺
 If you use the vercel nomenclature, it will be valid and any changes will be reflected in the `vercel.json` file.
 
 <details>
@@ -88,7 +88,7 @@ And uses a function handler in: `./root/api/example`
 
 </details>
 
-#### New Alternative
+#### New Alternative 🆕
 
 But you can use my alternative:
 
@@ -214,9 +214,9 @@ It makes you create this URL:
 
 And uses a function handler in: `./root/src/example/get?pathIds.id=$id&pathIds.customId=$customId`
 
-<details>
+</details>
 
-### Routes files
+### Routes files 📁
 
 The new files must be in `./root/routes/index.js`, it must export an array of objects.
 
@@ -246,7 +246,7 @@ npx vercel-serverless-routes --routesPath endpoints
 
 The files must be in `./root/endpoints/index.js`
 
-### Extra API
+### Extra API ⭐
 
 To use it must install the package in your project:
 
