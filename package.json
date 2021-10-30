@@ -15,8 +15,7 @@
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "coverage": "nyc npm test",
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
-    "lint": "eslint lib/ tests/",
-    "build-routes": "node lib/route-builder --useIndex true --useNotFound true"
+    "lint": "eslint lib/ tests/"
   },
   "repository": {
     "type": "git",

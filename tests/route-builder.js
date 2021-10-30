@@ -239,5 +239,44 @@ describe('Route Builder API', () => {
 				notFoundRoute
 			]);
 		});
+
+		it('Should create file if apis source path params identifier changes', async () => {
+
+			RouteBuilder.getRouteFile.returns([
+				{
+					...customRouteWithPathParam,
+					path: '/custom/:id'
+				},
+				{
+					...customRouteWithController,
+					path: '/custom/:id/controller/:controllerName'
+				}
+			]);
+
+			await RouteBuilder.build(['--pathParamId', ':\\w+']);
+
+			sinon.assert.calledOnceWithExactly(RouteBuilder.getRouteFile, `${process.cwd()}/routes`);
+			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
+				{
+					src: '/api/custom/(?<id>[^/]+)',
+					methods: ['POST'],
+					dest: '/api/custom/post?pathIds.id=$id'
+				},
+				{
+					src: '/api/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
+					methods: ['PUT'],
+					dest: '/api/controller/redirect?pathIds.id=$id&pathIds.controllerName=$controllerName'
+				},
+				{
+					src: '/',
+					methods: ['GET'],
+					dest: '/api/index'
+				},
+				{
+					src: '/.*',
+					dest: '/api/not-found'
+				}
+			]);
+		});
 	});
 });
