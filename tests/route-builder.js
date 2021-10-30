@@ -82,7 +82,7 @@ describe('Route Builder API', () => {
 				{
 					src: '/api/custom',
 					methods: ['GET'],
-					dest: '/api/custom/get'
+					dest: '/api/custom/list'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
@@ -145,7 +145,7 @@ describe('Route Builder API', () => {
 				{
 					src: '/api/custom',
 					methods: ['GET'],
-					dest: '/mySrc/custom/get'
+					dest: '/mySrc/custom/list'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
@@ -173,7 +173,10 @@ describe('Route Builder API', () => {
 
 			RouteBuilder.getRouteFile.returns([
 				customRouteWithoutMethod,
-				customRouteWithPathParam,
+				{
+					...customRouteWithPathParam,
+					method: 'get'
+				},
 				customRouteWithController
 			]);
 
@@ -184,12 +187,12 @@ describe('Route Builder API', () => {
 				{
 					src: '/logic/custom',
 					methods: ['GET'],
-					dest: '/api/custom/get'
+					dest: '/api/custom/list'
 				},
 				{
 					src: '/logic/custom/(?<id>[^/]+)',
-					methods: ['POST'],
-					dest: '/api/custom/post?pathIds.id=$id'
+					methods: ['GET'],
+					dest: '/api/custom/get?pathIds.id=$id'
 				},
 				{
 					src: '/logic/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
@@ -223,7 +226,7 @@ describe('Route Builder API', () => {
 				{
 					src: '/api/custom',
 					methods: ['GET'],
-					dest: '/api/custom/get'
+					dest: '/api/custom/list'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
@@ -244,7 +247,6 @@ describe('Route Builder API', () => {
 
 			RouteBuilder.getRouteFile.returns([
 				{
-					...customRouteWithPathParam,
 					path: '/custom/:id'
 				},
 				{
@@ -259,8 +261,8 @@ describe('Route Builder API', () => {
 			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
 				{
 					src: '/api/custom/(?<id>[^/]+)',
-					methods: ['POST'],
-					dest: '/api/custom/post?pathIds.id=$id'
+					methods: ['GET'],
+					dest: '/api/custom/get?pathIds.id=$id'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',

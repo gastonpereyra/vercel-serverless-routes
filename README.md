@@ -298,7 +298,7 @@ const { CannotFoundAPI } = require('vercel-serverless-routes');
 
 class CustomNotFound extends CannotFoundAPI {
 
-    get statusCode() {
+    getStatusCode() {
 		return 402;
 	}
 
