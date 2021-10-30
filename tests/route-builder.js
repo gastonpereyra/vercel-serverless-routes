@@ -81,17 +81,17 @@ describe('Route Builder API', () => {
 			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
 				{
 					src: '/api/custom',
-					methods: ['get'],
+					methods: ['GET'],
 					dest: '/api/custom/get'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
-					methods: ['post'],
+					methods: ['POST'],
 					dest: '/api/custom/post?pathIds.id=$id'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
-					methods: ['put'],
+					methods: ['PUT'],
 					dest: '/api/controller/redirect?pathIds.id=$id&pathIds.controllerName=$controllerName'
 				},
 				indexRoute, notFoundRoute
@@ -144,17 +144,17 @@ describe('Route Builder API', () => {
 			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
 				{
 					src: '/api/custom',
-					methods: ['get'],
+					methods: ['GET'],
 					dest: '/mySrc/custom/get'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
-					methods: ['post'],
+					methods: ['POST'],
 					dest: '/mySrc/custom/post?pathIds.id=$id'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
-					methods: ['put'],
+					methods: ['PUT'],
 					dest: '/mySrc/controller/redirect?pathIds.id=$id&pathIds.controllerName=$controllerName'
 				},
 				{
@@ -183,17 +183,17 @@ describe('Route Builder API', () => {
 			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
 				{
 					src: '/logic/custom',
-					methods: ['get'],
+					methods: ['GET'],
 					dest: '/api/custom/get'
 				},
 				{
 					src: '/logic/custom/(?<id>[^/]+)',
-					methods: ['post'],
+					methods: ['POST'],
 					dest: '/api/custom/post?pathIds.id=$id'
 				},
 				{
 					src: '/logic/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
-					methods: ['put'],
+					methods: ['PUT'],
 					dest: '/api/controller/redirect?pathIds.id=$id&pathIds.controllerName=$controllerName'
 				},
 				{
@@ -222,17 +222,17 @@ describe('Route Builder API', () => {
 			sinon.assert.calledOnceWithExactly(RouteBuilder.createFile, [
 				{
 					src: '/api/custom',
-					methods: ['get'],
+					methods: ['GET'],
 					dest: '/api/custom/get'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)',
-					methods: ['post'],
+					methods: ['POST'],
 					dest: '/api/custom/post?pathIds.id=$id'
 				},
 				{
 					src: '/api/custom/(?<id>[^/]+)/controller/(?<controllerName>[^/]+)',
-					methods: ['put'],
+					methods: ['PUT'],
 					dest: '/api/controller/redirect?pathIds.id=$id&pathIds.controllerName=$controllerName'
 				},
 				indexRoute,
