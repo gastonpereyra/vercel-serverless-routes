@@ -28,11 +28,7 @@
     "builder",
     "backend"
   ],
-  "author": {
-    "name": "Gastón Pereyra",
-    "email": "rgpxen@gmail.com",
-    "url": "https://github.com/gastonpereyra"
-  },
+  "author": "Gastón Pereyra"
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gastonpereyra/vercel-serverless-routes/issues?labels=bug&template=bug.md&title=[BUG]"
