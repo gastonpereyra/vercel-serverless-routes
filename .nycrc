@@ -3,7 +3,8 @@
     "tests/",
     "coverage/",
     ".eslintrc.js",
-    "actions/"
+    "actions/",
+    "bin/"
   ],
   "extension": [
     ".js"

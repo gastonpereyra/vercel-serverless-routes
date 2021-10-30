@@ -1,14 +1,16 @@
 {
-  "name": "vercel-serverless-router",
-  "version": "0.1.0",
-  "description": "A helper to build Vercel routes ",
+  "name": "vercel-serverless-routes",
+  "version": "1.0.0",
+  "description": "A helper to build Vercel routes",
   "main": "lib/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "bin/"
   ],
   "directories": {
     "test": "tests"
   },
+  "bin": "bin/build.js",
   "scripts": {
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "coverage": "nyc npm test",
@@ -17,13 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gastonpereyra/vercel-serverless-router.git"
+    "url": "git+https://github.com/gastonpereyra/vercel-serverless-routes.git"
   },
   "keywords": [
     "vercel",
     "serverless",
-    "router",
-    "builder"
+    "routes",
+    "builder",
+    "backend"
   ],
   "author": {
     "name": "Gastón Pereyra",
@@ -32,15 +35,20 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gastonpereyra/vercel-serverless-router/issues?labels=bug&template=bug.md&title=[BUG]"
+    "url": "https://github.com/gastonpereyra/vercel-serverless-routes/issues?labels=bug&template=bug.md&title=[BUG]"
   },
-  "homepage": "https://github.com/gastonpereyra/vercel-serverless-router#readme",
+  "homepage": "https://github.com/gastonpereyra/vercel-serverless-routes#readme",
   "devDependencies": {
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.25.2",
     "mocha": "^9.1.3",
     "nyc": "^15.1.0",
-    "sinon": "^11.1.2"
+    "sinon": "^11.1.2",
+    "vercel-serverless-tests": "^1.0.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "vercel-serverless-api": "^1.1.0"
   }
 }
